@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <EditText
+        android:id="@+id/passwordText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="@string/PasswordLabel"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/fileChooserText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/passwordText"
+        android:layout_below="@+id/passwordText"
+        android:ems="10"
+        android:hint="@string/fileChooser" />
+
+    <Button
+        android:id="@+id/browseButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fileChooserText"
+        android:layout_alignRight="@+id/fileChooserText"
+        android:layout_below="@+id/fileChooserText"
+        android:onClick="browseButton_Click"
+        android:text="@string/browseButton" />
+
+    <Button
+        android:id="@+id/lockButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/browseButton"
+        android:layout_alignRight="@+id/browseButton"
+        android:layout_below="@+id/browseButton"
+        android:onClick="lockButton_Click"
+        android:text="@string/lockButton" />
+
+    <Button
+        android:id="@+id/closeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lockButton"
+        android:layout_alignRight="@+id/lockButton"
+        android:layout_below="@+id/lockButton"
+        android:onClick="closeButton_Click"
+        android:text="@string/closeButton" />
+
+</RelativeLayout>
